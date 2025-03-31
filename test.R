@@ -12,6 +12,8 @@ p1 <- ggplot(penguins, aes(x = species, fill = species)) +
   labs(title = "Penguin species count",
        x = "Species",
        y = "Count") +
-  theme(legend.position = "none")
+  theme(legend.position = "none") +
+  scale_fill_manual(values = c("black", "blue", "red")) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
 p1
